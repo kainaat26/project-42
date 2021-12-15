@@ -7,7 +7,7 @@ function setup() {
 
 function draw() {
   background("black");  
-  translate(200,200);
+   translate(200,200);
    rotate(-90);
 
 
@@ -21,21 +21,21 @@ function draw() {
 
   push();
   rotate(scAngle);
-  stroke(255,0,0);
+  stroke(255,0,0);//red
   strokeWeight(7);
   line(0,0,100,0);
   pop();
 
   push();
   rotate(mnAngle);
-  stroke(0,255,0);
+  stroke(0,0,255);//blue
   strokeWeight(7);
   line(0,0,75,0);
   pop();
   
   push();
   rotate(hrAngle);
-  stroke(0,0,255);
+  stroke(0,255,0);//green
   strokeWeight(7);
   line(0,0,50,0);
   pop();
@@ -44,11 +44,15 @@ function draw() {
   point(0,0);
   strokeWeight(10);
   noFill();
+
   stroke(255,0,0);
   arc(0,0,300,300,0,scAngle);
-  stroke(0,255,0);
-  arc(0,0,280,280,0,mnAngle);
+
   stroke(0,0,255);
+  arc(0,0,280,280,0,mnAngle);
+  
+
+  stroke(0,255,0);//green
   arc(0,0,260,260,0,hrAngle);
   drawSprites();
 }
